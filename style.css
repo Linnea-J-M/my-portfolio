@@ -1,0 +1,132 @@
+* {
+   box-sizing: border-box;
+    margin: 0;
+}
+.body {
+    background-color: #F4F4EC;
+    font-family: 'cormorant', sans-serif;
+}
+.toolbar {
+    padding: 10px 0;
+}
+hr {
+    margin: 4px;
+}
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.toolbar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-wrapper {
+    display: flex;
+    gap: 50px;
+}
+.logo-wrapper {
+    font-size: 1.5rem;
+    font-family: 'Bodoni Moda', sans-serif;
+    font-weight: 400px;
+    color: #C93803;
+}
+main h1 {
+    text-align: center;
+    font-family: 'Bodoni Moda', sans-serif;
+    margin: 20px 0;
+    font-size: 6rem;
+    font-weight: 600;
+    color: black;
+}
+.overlay-container {
+    position: fixed; 
+    top: 6px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+h2 {
+    transition: 800ms ease-in-out;
+    font-family: 'Bodoni Moda', sans-serif;
+    font-size: 3.5rem;
+}
+h2:hover{
+    text-decoration: none;
+            color: #C93803;
+}
+.text-over-images {
+    padding-left: 20%;
+}
+p {
+    font-size: 1.5rem;
+    font-family: 'cormorant', sans-serif;
+    font-weight: 600;
+    color: #C93803;
+}
+.hero-section {
+    display: flex;
+}
+.hero-section > div {
+    flex: 1;
+}
+.hero-section .content {
+    height: 870px;
+    min-width: 640px;
+    background-color: #E3DCD2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.overlay-text {
+    position: absolute;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.image {
+  background-image: url('Fashion-image-1.jpeg');
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.content:hover .image {
+    opacity: 1;
+}
+.image-b {
+     background-image: url('Digital-designer-image-1.jpg');
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.content:hover .image-b {
+    opacity: 1;
+}
+.footer {
+    width: auto;
+    height: 200px;
+    padding: 10px;
+}
+
+
+.container text {
+    background-color: none;
+    padding: 300px 48px;
+    margin: 20px;
+    
+}
+p3 {
+padding: 40px;
+margin: 40px;
+font-family: 'cormorant',sans-serif;
+font-size: 1.5rem;
+}
