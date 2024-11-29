@@ -29,13 +29,6 @@ hr {
     gap: 40px;
     width: 324px;
 }
-.mobile-menu-icon {
-    display: none;
-    cursor: pointer;
-}
-.menu-wrapper.mobile {
-    display: none;
-}
 .logo-wrapper {
     font-size: 1.25rem;
     font-family: 'Bodoni Moda', sans-serif;
@@ -109,7 +102,7 @@ h2:hover{
     color: #C93803;
 }
 h3 {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     font-family: 'bodoni moda', sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
@@ -137,9 +130,14 @@ p {
 }
 .hero-section {
     display: flex;
+    margin-bottom: 20px;
 }
 .hero-section > div {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
 }
 .hero-section .content {
     height: 870px;
@@ -169,29 +167,9 @@ p {
 .content:hover .image {
     opacity: 1;
 }
-.image-b {
-     background-image: url('Digital-designer-image-1.jpg');
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-.content:hover .image-b {
-    opacity: 1;
-}
-.text-box-section {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 60px;
-    padding-bottom: 80px;
-}
+
 .text-box {
-    width: 45%;
+    width: 68%;
     text-align: center;
     padding: 20px;
 }
@@ -200,14 +178,52 @@ p {
     font-size: 1.25rem;
     text-align: center;
 }
-.get-to-know-me {
+.container-second-section, .container-third-section {
+    width: 1316px;
+    height: 542px;
+    background-color: #E3DCD2;
+    padding: 0 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    gap: 24px;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    margin: auto;
+    margin-top: 20px;
+}
+.container-fourth-section {
+    width: 1316px;
+    height: 800px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text-box-second-section,.text-box-third-section,.text-box-fourth-section {
+    width: 500px;
+    text-align: left;
+}
+
+.text-box-second-section h3,.text-box-third-section h3, .text-box-fourth-section h3 {
+    font-size: 2.25rem;
+    font-family: 'bodoni moda', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+}
+.hoodie-image {
+    width: 509px;
+    height: 420px;
+}
+.bag-image {
+    width: 473px;
+    height: 470px;
+}
+.collection-image {
+    width: 580px;
+    height: 772px;
 }
 .icon {
     padding: 20px;
@@ -226,7 +242,7 @@ p {
     border: 1px solid rgba(128, 128, 128, 0.50);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-family: 'Bodoni Moda', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #C93803;
     background-color: #F4F4EC;
@@ -236,6 +252,7 @@ p {
     background-color: white;
     text-decoration: underline;
 }
+
 .footer {
     display: flex;
     width: auto;
@@ -290,6 +307,7 @@ text-align: end;
 .vertical-hr {
     height: 130px;
 }
+
 .container text {
     background-color: none;
     padding: 300px 48px;
@@ -303,8 +321,7 @@ text-align: end;
         max-width: 100%;
     }
     .text-box {
-    min-width: 300px;
-    max-width: 740px;
+    width: 100%;
     }
     .footer-container {
         flex-direction: column;
@@ -384,16 +401,31 @@ text-align: end;
         transform: scale(1.05);
         transition: transform 0.8s ease;
     }
-   .image-b {
-        opacity: 1;
-        height: 400px;
-        background-size: cover;
-        background-position: center;
-        transform: scale(1.02);
-        transition: transform 0.8s ease;
-   }
-    .content:active .image,
-    .content:active .image-b {
+   
+    .container-second-section, .container-third-section, .container-fourth-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+    .container-second-section h3, 
+    .container-third-section h3, 
+    .container-fourth-section h3 {
+        font-size: 1.25rem;
+        text-align: center; 
+    }
+
+    .hoodie-image, .bag-image, .collection-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin: 20px 0;
+    }   
+
+    .content:active .image {
         transform: scale(1);
     }
     .text-box-section {
@@ -406,10 +438,6 @@ text-align: end;
     }
     .skills-text {
         font-size: 1rem;
-    }
-    .get-to-know-me {
-        font-size: 1rem;
-        padding: 20px 15px;
     }
 
     .footer-container {
@@ -444,11 +472,14 @@ text-align: end;
         font-size: 1.25rem;
         text-align: center;
     }
-    
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
     .toolbar-item {
         font-size: 1.25rem;
     }
-}
+} 
 
 @media (max-width: 480px) {
     .menu-wrapper {
@@ -459,14 +490,17 @@ text-align: end;
     h2 {
         font-size: 2rem;
     }
-
+    
     .text-over-images {
         padding-left: 10%;
     }
-    
-    .get-to-know-me {
-        padding: 20px 15px;
+    .text-box-second-section,
+    .text-box-third-section,
+    .text-box-fourth-section {
+        width: 100%;
+        padding: 15px;
     }
+
     
     .vertical-hr {
         display: none;
